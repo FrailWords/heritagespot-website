@@ -18,30 +18,36 @@
             color: #5d4037;
             text-align: center;
         }
+
         .container {
             max-width: 800px;
             padding: 20px;
         }
+
         .logo {
             max-width: 250px;
             margin-bottom: 30px;
         }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #8d6e63;
         }
+
         .tagline {
             font-size: 1.2rem;
             margin-bottom: 40px;
             max-width: 600px;
         }
+
         .coming-soon {
             font-size: 1.5rem;
             margin-bottom: 30px;
             font-weight: bold;
             color: #ff9800;
         }
+
         .support {
             margin-top: 20px;
             background-color: #8d6e63;
@@ -52,37 +58,50 @@
             transition: background-color 0.3s;
             font-weight: bold;
         }
+
         .support:hover {
             background-color: #6d4c41;
         }
+
         .store-links {
             display: flex;
             justify-content: center;
+            align-items: center;
             margin-top: 40px;
             gap: 20px;
         }
+
         .store-link {
             opacity: 0.5;
             transition: opacity 0.3s;
         }
+
         .store-link img {
             height: 50px;
         }
+
+        .play-store-img {
+            transform: scale(0.8);
+        }
+
         .coming-soon-notice {
             margin-top: 10px;
             font-style: italic;
             font-size: 0.9rem;
         }
+
         footer {
             margin-top: 50px;
             font-size: 0.8rem;
             color: #8d6e63;
         }
+
         .privacy-link {
             color: #8d6e63;
             text-decoration: none;
             border-bottom: 1px dotted #8d6e63;
         }
+
         .privacy-link:hover {
             color: #6d4c41;
         }
@@ -95,17 +114,20 @@
 
     <h1>HeritageSpot</h1>
 
-    <p class="tagline">Explore India's rich cultural and religious heritage - from majestic temples to historic mosques, churches, and forts. Available in 10 languages to make heritage accessible to all.</p>
+    <p class="tagline">Explore India's rich cultural and religious heritage - from majestic temples to historic mosques,
+        churches, and forts. Available in 10 languages to make heritage accessible to all.</p>
 
     <div class="coming-soon">Now available on both Apple iOS and Android</div>
 
     <div class="store-links">
         <!-- These will be enabled later when your app is published -->
         <a href="https://apps.apple.com/in/app/heritagespot/id6743646320">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                 alt="App Store">
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.heritage.spot">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                 alt="Google Play" class="play-store-img">
         </a>
     </div>
 
@@ -113,7 +135,8 @@
 </div>
 
 <footer>
-    <p>© 2025 HeritageSpot. All rights reserved. | <a href="privacy-policy.html" class="privacy-link">Privacy Policy</a></p>
+    <p>© 2025 HeritageSpot. All rights reserved. | <a href="privacy-policy.html" class="privacy-link">Privacy Policy</a>
+    </p>
 </footer>
 </body>
 </html>
