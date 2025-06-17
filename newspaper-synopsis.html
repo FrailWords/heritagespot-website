@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Spot App - Synopsis</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background: #fff;
+        }
+
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #A0522D;
+            font-size: 1.4em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 4px solid #D2691E;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #8B4513;
+            font-size: 1.2em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #8B4513;
+        }
+
+        .website-link {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .website-link a {
+            color: #D2691E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .website-link a:hover {
+            text-decoration: underline;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, #f5f5dc 0%, #faf0e6 100%);
+            border: 2px solid #D2691E;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .download-section h2 {
+            border: none;
+            padding: 0;
+            margin-top: 0;
+            color: #8B4513;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .qr-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .qr-item strong {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #8B4513;
+        }
+
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #D2691E;
+            border-radius: 10px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        .qr-url {
+            font-size: 0.8em;
+            color: #666;
+            word-break: break-all;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .contact-section {
+            background: #faf0e6;
+            border: 1px solid #D2691E;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #A0522D;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            background: #faf0e6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #D2691E;
+        }
+
+        .feature-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .qr-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+
+            .download-section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Heritage Spot App - Synopsis</h1>
+
+<h2>What is Heritage Spot?</h2>
+<p>Heritage Spot is a comprehensive mobile app guide to India's magnificent heritage sites, temples, mosques, churches, and historical monuments. We cover over 200 carefully curated heritage sites from all regions of India - South, North, West, East, Central, and Northeast.</p>
+
+<div class="website-link">
+    <a href="https://heritagespotapp.com/" target="_blank">https://heritagespotapp.com/</a>
+</div>
+
+<h2>Key Features</h2>
+<div class="feature-grid">
+    <div class="feature-item">
+        <strong>200+ heritage sites</strong>
+        <p>Across all Indian regions</p>
+    </div>
+    <div class="feature-item">
+        <strong>10 languages</strong>
+        <p>English plus 9 Indian regional languages</p>
+    </div>
+    <div class="feature-item">
+        <strong>Detailed information</strong>
+        <p>Religious significance, architectural features, historical events, visiting information, and special features</p>
+    </div>
+    <div class="feature-item">
+        <strong>Location intelligence</strong>
+        <p>Understand directional significance and nearby landmarks</p>
+    </div>
+    <div class="feature-item">
+        <strong>Rich cultural context</strong>
+        <p>Learn about deities, saints, historical figures, festivals and celebrations</p>
+    </div>
+    <div class="feature-item">
+        <strong>Practical visiting information</strong>
+        <p>Opening hours, dress codes, accessibility features, guidelines</p>
+    </div>
+</div>
+
+<h2>Who Uses Heritage Spot</h2>
+<p><strong>Designed for:</strong> Pilgrims, tourists, history enthusiasts, and cultural explorers</p>
+<ul>
+    <li><strong>Pilgrims</strong> planning spiritual journeys</li>
+    <li><strong>Tourists</strong> (domestic and international) exploring India's culture</li>
+    <li><strong>Families</strong> looking for educational weekend trips</li>
+    <li><strong>History enthusiasts</strong> interested in India's past</li>
+    <li><strong>Cultural explorers</strong> wanting to discover lesser-known sites</li>
+</ul>
+
+<h2>Why Now?</h2>
+<p>Heritage tourism in India is growing rapidly. More people are traveling domestically, especially for spiritual and cultural experiences. There's increasing interest among younger Indians to learn about their heritage, but they want comprehensive information that's easily accessible on their phones.</p>
+
+<h2>What Makes Us Different</h2>
+<p>Most heritage information is scattered across different sources, often only in English, and lacks depth. We've created one comprehensive app with everything in multiple languages, covering both famous sites and hidden gems that most people don't know about.</p>
+
+<h2>Content Examples</h2>
+<p>Our app includes places like:</p>
+<ul>
+    <li><strong>Famous sites:</strong> Ajanta Caves, Golden Temple, Meenakshi Temple</li>
+    <li><strong>Hidden gems:</strong> Ancient stepwells in Gujarat, Portuguese churches in Goa, heritage havelis in Rajasthan</li>
+    <li><strong>All religions:</strong> Hindu temples, mosques, Christian churches, Buddhist monasteries, Sikh gurudwaras</li>
+</ul>
+
+<h2>Current Status</h2>
+<ul>
+    <li>Live on app stores</li>
+    <li>Growing user base across India</li>
+    <li>Regular updates with new sites and features</li>
+    <li>Positive user feedback on content quality and ease of use</li>
+</ul>
+
+<h2>Focus Areas</h2>
+<p><strong>Major Cities:</strong> Delhi, Mumbai, Bangalore, Chennai, Kolkata, Hyderabad, Pune, Ahmedabad, Jaipur</p>
+<p><strong>Demographics:</strong> Urban professionals (25-50), families, senior citizens interested in heritage travel, international visitors</p>
+<p>The app appeals to city residents who travel for weekends and holidays, and there's growing interest in heritage tourism across all these metros.</p>
+
+<div class="download-section">
+    <h2>Download Heritage Spot</h2>
+
+    <div class="qr-container">
+        <div class="qr-item">
+            <strong>iOS App Store</strong>
+            <img src="images/ios-qr-code.png" alt="iOS QR Code" class="qr-code">
+            <a href="https://apps.apple.com/in/app/heritagespot/id6743646320" target="_blank">
+                <div class="qr-url">https://apps.apple.com/in/app/heritagespot/id6743646320</div>
+            </a>
+        </div>
+
+        <div class="qr-item">
+            <strong>Google Play Store</strong>
+            <img src="images/android-qr-code.png" alt="Android QR Code" class="qr-code">
+            <a href="https://play.google.com/store/apps/details?id=com.heritage.spot" target="_blank">
+                <div class="qr-url">https://play.google.com/store/apps/details?id=com.heritage.spot</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="contact-section">
+    <p><strong>Contact:</strong> heritagespotin@gmail.com</p>
+    <p><strong>Website:</strong> <a href="https://heritagespotapp.com/">https://heritagespotapp.com/</a></p>
+    <div class="tagline">
+        <em>Embark on a journey through India's spiritual and cultural legacy.</em>
+    </div>
+</div>
+
+</body>
+</html>
