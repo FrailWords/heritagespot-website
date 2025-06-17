@@ -476,9 +476,9 @@ p {
     position: relative;
     border-radius: 35px;
     overflow: hidden;
-    height: 626px; /* Specific height from existing code, matching Figma proportions */
+    height: 626px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Added shadow */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .category-card:hover {
@@ -511,17 +511,27 @@ p {
 
 .category-tag {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    background: var(--tertiary-medium); /* From heritage_theme.dart */
-    color: var(--neutral-1); /* From heritage_theme.dart */
-    padding: 10px 20px; /* Slightly larger padding */
-    border-radius: 25px; /* More rounded */
+    top: 30px;
+    right: 30px;
+    bottom: auto;
+    left: auto;
+    background: var(--tertiary-medium);
+    color: var(--neutral-1);
+    padding: 10px 20px;
+    border-radius: 25px;
     font-weight: 700;
-    font-size: 18px; /* labelLarge equivalent */
-    z-index: 2; /* Above overlay */
+    font-size: 18px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
 }
 
+.category-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
 
 /* App Features Section */
 .app-features {
