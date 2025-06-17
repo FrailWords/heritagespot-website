@@ -104,6 +104,13 @@ p {
     align-items: center;
 }
 
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .logo-image {
     height: 50px; /* Standard height for desktop logo */
     width: auto;
@@ -186,8 +193,10 @@ p {
 
 /* Hero Section */
 .hero {
-    /* Radial gradient to match Figma's soft, light background */
-    background: radial-gradient(at center top, var(--tertiary-light) 0%, rgba(255, 255, 255, 0.5) 100%);
+    /* Enhanced radial gradient to match Figma's visible gradient behind the phone */
+    background:
+            radial-gradient(ellipse 600px 500px at center 55%, rgba(166, 117, 89, 0.3) 0%, rgba(166, 117, 89, 0.1) 30%, transparent 70%),
+            var(--tertiary-light);
     padding: 80px 0 100px; /* Adjusted padding to match Figma spacing */
     position: relative;
     overflow: hidden;
@@ -313,6 +322,55 @@ p {
 .why-section h2 {
     text-align: center;
     margin-bottom: 60px;
+}
+
+.why-hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.why-hero-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+}
+
+.why-hero-left {
+    justify-content: flex-end;
+}
+
+.why-hero-right {
+    justify-content: flex-start;
+}
+
+.why-hero-phone {
+    width: 300px;
+    height: auto;
+}
+
+.why-features-central-phone {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.features-list-left,
+.features-list-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+}
+
+.why-central-phone {
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .features-grid {
@@ -639,8 +697,29 @@ p {
     .hero-buttons {
         justify-content: center;
     }
+    .why-hero-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .why-hero-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .why-features-central-phone {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-list-left,
+    .features-list-right {
+        align-items: center;
+    }
     .features-grid {
         gap: 40px 30px;
+    }
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     .categories h2,
     .categories-subtitle {
@@ -672,7 +751,7 @@ p {
         padding: 10px 0; /* Reduced padding for mobile header height */
     }
 
-    .navbar {
+    .navbar .container {
         justify-content: space-between; /* Ensure space between logo and hamburger */
     }
 
@@ -704,6 +783,12 @@ p {
         text-align: center;
         border-bottom: 1px solid var(--alternate); /* Separator */
         font-size: 16px; /* Smaller font size for mobile menu links */
+        border-radius: 0;
+        background: transparent;
+        color: var(--neutral-2);
+        border-left: none;
+        border-right: none;
+        border-top: none;
     }
 
     .nav-menu .nav-link:last-child {
@@ -817,17 +902,6 @@ p {
     .why-section,
     .app-features {
         padding: 60px 0;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr; /* Single column for features */
-        gap: 40px;
-    }
-
-    .feature-item {
-        flex-direction: column; /* Icon above text */
-        align-items: center; /* Center horizontally */
-        text-align: center; /* Center text */
     }
 
     .feature-icon-wrapper {
