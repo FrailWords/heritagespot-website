@@ -73,7 +73,7 @@ h2 {
 }
 
 h3 {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 24px; /* Approximated from Figma feature item titles */
     font-weight: 700;
     line-height: 1.3;
@@ -419,27 +419,25 @@ p {
     flex-shrink: 0;
     width: 70px; /* Larger icon circle */
     height: 70px;
-    background: var(--secondary-light); /* Background from theme */
+    /*background: var(--secondary-light); !* Background from theme *!*/
     border-radius: 50%;
+    color: var(--secondary-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    /*box-shadow: 0 4px 8px rgba(0,0,0,0.1); !* Subtle shadow *!*/
 }
 
 .feature-icon {
     width: 40px; /* Icon size inside circle */
     height: 40px;
-    /* Make this SVG icon white */
-    filter: invert(100%);
 }
 
 
 .feature-content h3 {
     font-size: 20px; /* headingSmall equivalent */
-    color: var(--secondary); /* Changed from --primary-light to --secondary to match Flutter theme for headings */
+    color: var(--primary-light);
     margin-bottom: 10px;
-    font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.02em;
 }
