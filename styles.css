@@ -193,14 +193,14 @@ p {
 
 /* Hero Section */
 .hero {
-    /* Enhanced radial gradient to match Figma's visible gradient behind the phone */
     background:
-            radial-gradient(ellipse 600px 500px at center 55%, rgba(166, 117, 89, 0.3) 0%, rgba(166, 117, 89, 0.1) 30%, transparent 70%),
+            radial-gradient(ellipse 400px 300px at 48% 60%, rgba(166, 117, 89, 0.4) 0%, rgba(166, 117, 89, 0.15) 40%, transparent 70%),
+            radial-gradient(ellipse 400px 300px at 52% 60%, rgba(255, 212, 133, 0.4) 0%, rgba(255, 212, 133, 0.15) 40%, transparent 70%),
             var(--tertiary-light);
-    padding: 80px 0 100px; /* Adjusted padding to match Figma spacing */
+    padding: 80px 0 100px;
     position: relative;
     overflow: hidden;
-    text-align: center; /* Center everything in hero section on desktop too, as per 1.jpg */
+    text-align: center;
 }
 
 .hero-content {
@@ -326,37 +326,63 @@ p {
 
 .why-hero-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+    flex-direction: column;
+    gap: 80px;
     margin-bottom: 80px;
 }
 
 .why-hero-item {
     display: flex;
     align-items: center;
-    gap: 40px;
-    flex: 1;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .why-hero-left {
-    justify-content: flex-end;
+    justify-content: flex-start;
+}
+
+.why-hero-left .feature-item {
+    order: 2; /* Feature goes after phone */
+}
+
+.why-hero-left .why-hero-phone {
+    order: 1; /* Phone comes first */
 }
 
 .why-hero-right {
     justify-content: flex-start;
 }
 
+.why-hero-right .feature-item {
+    order: 1; /* Feature comes first */
+}
+
+.why-hero-right .why-hero-phone {
+    order: 2; /* Phone goes after feature */
+}
+
 .why-hero-phone {
     width: 300px;
     height: auto;
+    flex-shrink: 0;
 }
 
 .why-features-central-phone {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background:
+            radial-gradient(ellipse 400px 300px at 40% center, rgba(166, 117, 89, 0.5) 0%, rgba(166, 117, 89, 0.2) 40%, transparent 70%),
+            radial-gradient(ellipse 400px 300px at 60% center, rgba(255, 212, 133, 0.5) 0%, rgba(255, 212, 133, 0.2) 40%, transparent 70%),
+            var(--tertiary-light);
+    border-radius: 20px;
 }
 
 .features-list-left,
@@ -365,6 +391,7 @@ p {
     flex-direction: column;
     gap: 40px;
     flex: 1;
+    max-width: 300px;
 }
 
 .why-central-phone {
@@ -376,16 +403,16 @@ p {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px 40px; /* Increased vertical gap */
-    max-width: 900px; /* Slightly wider grid */
+    gap: 60px 40px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .feature-item {
     display: flex;
     gap: 20px;
-    align-items: flex-start; /* Aligns content to the top for desktop */
-    text-align: left; /* Aligns text to the left for desktop */
+    align-items: flex-start;
+    text-align: left;
 }
 
 .feature-icon-wrapper {
@@ -763,7 +790,7 @@ p {
         display: none; /* Hide desktop nav menu */
         flex-direction: column;
         position: absolute;
-        top: 50px; /* Adjusted based on smaller header height */
+        top: 50px;
         left: 0;
         width: 100%;
         background-color: var(--tertiary-light);
@@ -785,7 +812,7 @@ p {
         font-size: 16px; /* Smaller font size for mobile menu links */
         border-radius: 0;
         background: transparent;
-        color: var(--neutral-2);
+        color: var(--neutral-1);
         border-left: none;
         border-right: none;
         border-top: none;
@@ -814,6 +841,10 @@ p {
 
     /* Mobile Hero */
     .hero {
+        background:
+                radial-gradient(ellipse 200px 150px at 48% 60%, rgba(166, 117, 89, 0.2) 0%, rgba(166, 117, 89, 0.05) 40%, transparent 70%),
+                radial-gradient(ellipse 200px 150px at 52% 60%, rgba(255, 212, 133, 0.2) 0%, rgba(255, 212, 133, 0.05) 40%, transparent 70%),
+                var(--tertiary-light);
         padding: 60px 0 80px; /* Adjusted padding */
     }
 
@@ -832,7 +863,7 @@ p {
     }
 
     .phone-mockup-image {
-        max-width: 280px; /* Adjusted phone size for mobile */
+        max-width: 200px;
     }
 
     .language-circle {

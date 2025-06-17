@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Updated font links to Rubik for headings and Open Sans for body, as per heritage_theme.dart -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +16,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="images/logo/logo.png" alt="HeritageSpot" class="logo-image" srcset="images/logo/logo@2x.png 2x">
+                <a href="#" onclick="scrollToTop(); return false;">
+                    <img src="images/logo/logo.png" alt="HeritageSpot" class="logo-image"
+                         srcset="images/logo/logo@2x.png 2x">
+                </a>
             </div>
             <div class="nav-menu">
                 <a href="#support" class="nav-link support-btn">Support</a>
@@ -40,32 +44,69 @@
                 <div class="transform-badge">Transform Your India Experience</div>
                 <div class="hero-text">
                     <h1>Explore India's Rich Cultural and Religious Heritage</h1>
-                    <p>From majestic temples to historic mosques, churches, and forts. Available in 10 languages to make heritage accessible to all.</p>
+                    <p>From majestic temples to historic mosques, churches, and forts. Available in 10 languages to make
+                        heritage accessible to all.</p>
                     <div class="hero-buttons">
-                        <a href="#" class="store-btn">
+                        <a href="https://apps.apple.com/in/app/heritagespot/id6743646320" class="store-btn" target="_blank">
                             <!-- Updated to use placeholder SVG paths and removed inline style -->
                             <img src="images/app_store.svg" alt="Download on App Store">
                         </a>
-                        <a href="#" class="store-btn">
+                        <a href="https://play.google.com/store/apps/details?id=com.heritage.spot" class="store-btn" target="_blank">
                             <!-- Updated to use placeholder SVG paths and removed inline style -->
                             <img src="images/play_store.svg" alt="Get it on Google Play">
                         </a>
                     </div>
                 </div>
                 <div class="hero-mockup">
-                    <img src="images/mockups/hero-phone-mockup.png" alt="HeritageSpot App" class="phone-mockup-image" srcset="images/mockups/hero-phone-mockup@2x.png 2x">
+                    <img src="images/mockups/hero-phone-mockup.png" alt="HeritageSpot App" class="phone-mockup-image"
+                         srcset="images/mockups/hero-phone-mockup@2x.png 2x">
                     <div class="floating-elements">
                         <!-- Added actual Unicode characters for visibility based on your mapping -->
                         <div class="language-circle" data-lang="अ">अ</div> <!-- Hindi -->
                         <div class="language-circle" data-lang="த">த</div> <!-- Tamil -->
-                        <div class="language-circle" data-lang="க">க</div> <!-- Kannada (Corrected from 'ಕ' to 'க' based on visual consistency with Tamil 'த' if single character is intended, original 'ಕ' is also valid for Kannada.) -->
+                        <div class="language-circle" data-lang="க">க</div>
+                        <!-- Kannada (Corrected from 'ಕ' to 'க' based on visual consistency with Tamil 'த' if single character is intended, original 'ಕ' is also valid for Kannada.) -->
                         <div class="language-circle" data-lang="മ">മ</div> <!-- Malayalam -->
                         <div class="language-circle" data-lang="ব">ব</div> <!-- Bengali -->
-                        <div class="language-circle" data-lang="ગુ">ગુ</div> <!-- Gujarati (Restored original 'ગુ' as it better represents the language.) -->
+                        <div class="language-circle" data-lang="ગુ">ગુ</div>
+                        <!-- Gujarati (Restored original 'ગુ' as it better represents the language.) -->
                         <div class="language-circle" data-lang="ଓ">ଓ</div> <!-- Odia -->
-                        <div class="language-circle" data-lang="এ">এ</div> <!-- Assamese (kept existing from Tamil/Telugu mapping for visual consistency) -->
+                        <div class="language-circle" data-lang="এ">এ</div>
+                        <!-- Assamese (kept existing from Tamil/Telugu mapping for visual consistency) -->
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Your comprehensive guide to India's magnificent heritage sites, temples, mosques, churches, and
+                historical monuments.</h2>
+            <p class="categories-subtitle">Designed for pilgrims, tourists, history enthusiasts, and cultural explorers,
+                our app offers detailed information about sacred and historical places across all regions of India.</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="images/categories/temples.png" alt="Temples" class="category-image"
+                     srcset="images/categories/temples@2x.png 2x">
+                <div class="category-tag">Temples</div>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/mosques.png" alt="Mosques" class="category-image"
+                     srcset="images/categories/mosques@2x.png 2x">
+                <div class="category-tag">Mosques</div>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/churches.png" alt="Churches" class="category-image"
+                     srcset="images/categories/churches@2x.png 2x">
+                <div class="category-tag">Churches</div>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/monuments.png" alt="Monuments" class="category-image"
+                     srcset="images/categories/monuments@2x.png 2x">
+                <div class="category-tag">Monuments</div>
             </div>
         </div>
     </section>
@@ -80,24 +121,30 @@
                 <div class="why-hero-item why-hero-left">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/comprehensive-coverage.svg" alt="Comprehensive Coverage" class="feature-icon">
+                            <img src="images/features/comprehensive-coverage.svg" alt="Comprehensive Coverage"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Comprehensive Coverage</h3>
-                            <p>Explore over 200 carefully curated heritage sites from all regions of India - South, North, West, East, Central, and Northeast.</p>
+                            <p>Explore over 200 carefully curated heritage sites from all regions of India - South,
+                                North, West, East, Central, and Northeast.</p>
                         </div>
                     </div>
-                    <img src="images/mockups/why-phone-1.png" alt="Comprehensive Coverage App Screen" class="why-hero-phone" srcset="images/mockups/why-phone-1@2x.png 2x">
+                    <img src="images/mockups/why-phone-1.png" alt="Comprehensive Coverage App Screen"
+                         class="why-hero-phone" srcset="images/mockups/why-phone-1@2x.png 2x">
                 </div>
                 <div class="why-hero-item why-hero-right">
-                    <img src="images/mockups/why-phone-2.png" alt="Multilingual Experience App Screen" class="why-hero-phone" srcset="images/mockups/why-phone-2@2x.png 2x">
+                    <img src="images/mockups/why-phone-2.png" alt="Multilingual Experience App Screen"
+                         class="why-hero-phone" srcset="images/mockups/why-phone-2@2x.png 2x">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/multilingual.svg" alt="Multilingual Experience" class="feature-icon">
+                            <img src="images/features/multilingual.svg" alt="Multilingual Experience"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Multilingual Experience</h3>
-                            <p>Navigate the app in 10 languages including English and 9 Indian languages, making it accessible to diverse users across the country.</p>
+                            <p>Navigate the app in 10 languages including English and 9 Indian languages, making it
+                                accessible to diverse users across the country.</p>
                         </div>
                     </div>
                 </div>
@@ -108,80 +155,65 @@
                 <div class="features-list-left">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/detailed-info.svg" alt="Detailed Information" class="feature-icon">
+                            <img src="images/features/detailed-info.svg" alt="Detailed Information"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Detailed Information</h3>
-                            <p>Each site features rich details about its religious significance, architectural features, historical events, visiting information, and special features.</p>
+                            <p>Each site features rich details about its religious significance, architectural features,
+                                historical events, visiting information, and special features.</p>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/location-intelligence.svg" alt="Location Intelligence" class="feature-icon">
+                            <img src="images/features/location-intelligence.svg" alt="Location Intelligence"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Location Intelligence</h3>
-                            <p>Get directional significance of each site - understand what landmarks, sacred spots, or historical elements are located in different directions.</p>
+                            <p>Get directional significance of each site - understand what landmarks, sacred spots, or
+                                historical elements are located in different directions.</p>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/cultural-context.svg" alt="Rich Cultural Context" class="feature-icon">
+                            <img src="images/features/cultural-context.svg" alt="Rich Cultural Context"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Rich Cultural Context</h3>
-                            <p>Learn about deities, saints, or historical figures associated with each site, as well as festivals and special celebrations.</p>
+                            <p>Learn about deities, saints, or historical figures associated with each site, as well as
+                                festivals and special celebrations.</p>
                         </div>
                     </div>
                 </div>
-                <img src="images/mockups/why-phone-central.png" alt="Central App Screen" class="why-central-phone" srcset="images/mockups/why-phone-central@2x.png 2x">
+                <img src="images/mockups/why-phone-central.png" alt="Central App Screen" class="why-central-phone"
+                     srcset="images/mockups/why-phone-central@2x.png 2x">
                 <div class="features-list-right">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/visiting-info.svg" alt="Practical Visiting Information" class="feature-icon">
+                            <img src="images/features/visiting-info.svg" alt="Practical Visiting Information"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Practical Visiting Information</h3>
-                            <p>Find essential details like opening hours, dress codes, accessibility features, and guidelines for respectful visits.</p>
+                            <p>Find essential details like opening hours, dress codes, accessibility features, and
+                                guidelines for respectful visits.</p>
                         </div>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="images/features/nearby-exploration.svg" alt="Nearby Exploration" class="feature-icon">
+                            <img src="images/features/nearby-exploration.svg" alt="Nearby Exploration"
+                                 class="feature-icon">
                         </div>
                         <div class="feature-content">
                             <h3>Nearby Exploration</h3>
-                            <p>Discover other heritage sites near your current location or near a site you're viewing.</p>
+                            <p>Discover other heritage sites near your current location or near a site you're
+                                viewing.</p>
                         </div>
                     </div>
                     <!-- Removed Offline Access feature as per previous instructions -->
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="categories" id="categories">
-        <div class="container">
-            <h2>Your comprehensive guide to India's magnificent heritage sites, temples, mosques, churches, and historical monuments.</h2>
-            <p class="categories-subtitle">Designed for pilgrims, tourists, history enthusiasts, and cultural explorers, our app offers detailed information about sacred and historical places across all regions of India.</p>
-        </div>
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="images/categories/temples.png" alt="Temples" class="category-image" srcset="images/categories/temples@2x.png 2x">
-                <div class="category-tag">Temples</div>
-            </div>
-            <div class="category-card">
-                <img src="images/categories/mosques.png" alt="Mosques" class="category-image" srcset="images/categories/mosques@2x.png 2x">
-                <div class="category-tag">Mosques</div>
-            </div>
-            <div class="category-card">
-                <img src="images/categories/churches.png" alt="Churches" class="category-image" srcset="images/categories/churches@2x.png 2x">
-                <div class="category-tag">Churches</div>
-            </div>
-            <div class="category-card">
-                <img src="images/categories/monuments.png" alt="Monuments" class="category-image" srcset="images/categories/monuments@2x.png 2x">
-                <div class="category-tag">Monuments</div>
             </div>
         </div>
     </section>
@@ -243,21 +275,25 @@
         <div class="container">
             <div class="cta-content">
                 <div class="cta-text">
-                    <h2>Download HeritageSpot today and embark on a journey through India's spiritual and cultural legacy.</h2>
-                    <p>Whether you're planning a pilgrimage, a cultural tour, or simply wanting to learn more about India's rich heritage, HeritageSpot provides an enriching experience that connects you with the divine and historical treasures of India.</p>
+                    <h2>Download HeritageSpot today and embark on a journey through India's spiritual and cultural
+                        legacy.</h2>
+                    <p>Whether you're planning a pilgrimage, a cultural tour, or simply wanting to learn more about
+                        India's rich heritage, HeritageSpot provides an enriching experience that connects you with the
+                        divine and historical treasures of India.</p>
                     <div class="cta-buttons">
-                        <a href="#" class="store-btn">
+                        <a href="https://apps.apple.com/in/app/heritagespot/id6743646320" class="store-btn" target="_blank">
                             <!-- Updated to use placeholder SVG paths and removed inline style -->
                             <img src="images/app_store.svg" alt="Download on App Store">
                         </a>
-                        <a href="#" class="store-btn">
+                        <a href="https://play.google.com/store/apps/details?id=com.heritage.spot" class="store-btn" target="_blank">
                             <!-- Updated to use placeholder SVG paths and removed inline style -->
                             <img src="images/play_store.svg" alt="Get it on Google Play">
                         </a>
                     </div>
                 </div>
                 <div class="cta-mockup">
-                    <img src="images/mockups/cta-phone-mockup.png" alt="HeritageSpot App Features" class="cta-phone-image" srcset="images/mockups/cta-phone-mockup@2x.png 2x">
+                    <img src="images/mockups/cta-phone-mockup.png" alt="HeritageSpot App Features"
+                         class="cta-phone-image" srcset="images/mockups/cta-phone-mockup@2x.png 2x">
                 </div>
             </div>
         </div>
@@ -267,7 +303,10 @@
 <footer class="footer" id="support">
     <div class="container">
         <div class="footer-logo">
-            <img src="images/logo/logo.png" alt="HeritageSpot" class="logo-image" srcset="images/logo/logo@2x.png 2x">
+            <a href="#" onclick="scrollToTop(); return false;">
+                <img src="images/logo/logo.png" alt="HeritageSpot" class="logo-image"
+                     srcset="images/logo/logo@2x.png 2x">
+            </a>
         </div>
         <div class="footer-links">
             <div class="social-icons">
@@ -291,12 +330,19 @@
 </footer>
 
 <script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     // Simple JavaScript for mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
