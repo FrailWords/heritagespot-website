@@ -467,16 +467,19 @@ p {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 405px);
     gap: 30px;
     margin-top: 50px;
+    justify-content: center;
 }
+
 
 .category-card {
     position: relative;
     border-radius: 35px;
     overflow: hidden;
     height: 626px;
+    width: 405px; /* Adding explicit width from Figma */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -507,30 +510,6 @@ p {
     background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
     pointer-events: none;
     z-index: 1; /* Above image, below tag */
-}
-
-.category-tag {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: auto;
-    left: auto;
-    background: var(--tertiary-medium);
-    color: var(--neutral-1);
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 18px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between icon and text */
-}
-
-.category-icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
 }
 
 /* App Features Section */
@@ -891,51 +870,42 @@ p {
     .language-circle:nth-child(8) { bottom: 0%; right: 15%; }
 
 
-    /* Mobile Categories */
+    /* Mobile Categories - Simplified */
     .categories {
         padding: 60px 0;
     }
 
-    h2 {
-        font-size: 28px; /* Mobile h2 size */
-        margin-bottom: 25px;
-    }
-
-    .categories-subtitle {
-        font-size: 16px;
-        margin-bottom: 40px;
+    .categories .container {
+        padding: 0; /* Remove container padding */
     }
 
     .category-grid {
-        /* On mobile, use flexbox for horizontal scrolling */
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
-        padding-bottom: 20px; /* Space for scrollbar if present */
-        margin: 0; /* Remove horizontal margins to allow full width scroll */
+        -webkit-overflow-scrolling: touch;
+        padding: 0 15px 20px 15px;
+        gap: 20px;
     }
 
     .category-grid::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for aesthetics */
-    }
-    .category-grid {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        display: none;
     }
 
     .category-card {
-        flex: 0 0 280px; /* Fixed width for horizontal scroll item */
-        height: 400px; /* Adjusted height for mobile cards */
+        flex: 0 0 280px; /* Fixed width, no shrinking */
+        width: 280px;
+        height: 400px;
         scroll-snap-align: start;
-        margin-right: 20px; /* Spacing between cards */
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Lighter shadow */
+    }
+
+    .category-card:first-child {
+        margin-left: 0; /* Ensure first card starts at left edge */
     }
 
     .category-card:last-child {
         margin-right: 0;
     }
-
 
     /* Mobile Why HeritageSpot */
     .why-section,
