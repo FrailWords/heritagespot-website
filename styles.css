@@ -252,6 +252,30 @@ p {
     transform: scale(1.05);
 }
 
+.store-btn.coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 0 18px;
+    border-radius: 8px;
+    background-color: #2b2b2b;
+    color: #fff;
+    opacity: 0.65;
+    cursor: default;
+}
+
+.store-btn.coming-soon .coming-soon-caption {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.store-btn.coming-soon .coming-soon-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .hero-mockup {
     display: flex;
     justify-content: center;
@@ -1010,6 +1034,10 @@ p {
     .store-btn img {
         height: 50px; /* Smaller app badge height */
         max-width: 200px;
+    }
+
+    .store-btn.coming-soon {
+        height: 50px;
     }
 
     .support-link {
