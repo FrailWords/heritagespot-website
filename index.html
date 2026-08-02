@@ -90,18 +90,58 @@
             <div class="category-card">
                 <img src="images/categories/temples.png" alt="Temples" class="category-image"
                      srcset="images/categories/temples@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/temple-icon.svg" alt="Temple Icon" class="category-icon">
+                    Temples
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/gurdwaras.png" alt="Gurdwaras" class="category-image"
+                     srcset="images/categories/gurdwaras@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/gurdwara-icon.svg" alt="Gurdwara Icon" class="category-icon">
+                    Gurdwaras
+                </div>
             </div>
             <div class="category-card">
                 <img src="images/categories/mosques.png" alt="Mosques" class="category-image"
                      srcset="images/categories/mosques@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/mosque-icon.svg" alt="Mosque Icon" class="category-icon">
+                    Mosques
+                </div>
             </div>
             <div class="category-card">
                 <img src="images/categories/churches.png" alt="Churches" class="category-image"
                      srcset="images/categories/churches@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/church-icon.svg" alt="Church Icon" class="category-icon">
+                    Churches
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/monasteries.png" alt="Monasteries" class="category-image"
+                     srcset="images/categories/monasteries@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/monastery-icon.svg" alt="Monastery Icon" class="category-icon">
+                    Monasteries
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="images/categories/forts_palaces.png" alt="Forts & Palaces" class="category-image"
+                     srcset="images/categories/forts_palaces@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/fort-icon.svg" alt="Fort Icon" class="category-icon">
+                    Forts &amp; Palaces
+                </div>
             </div>
             <div class="category-card">
                 <img src="images/categories/monuments.png" alt="Monuments" class="category-image"
                      srcset="images/categories/monuments@2x.png 2x">
+                <div class="category-tag">
+                    <img src="images/icons/monument-icon.svg" alt="Monument Icon" class="category-icon">
+                    Monuments
+                </div>
             </div>
         </div>
     </section>
@@ -358,6 +398,17 @@
                 mobileMenuToggle.classList.remove('active');
             });
         });
+
+        // Edge fade on the (mobile-only) horizontally scrolling category row
+        const categoryGrid = document.querySelector('.category-grid');
+        const updateCategoryScrollFade = () => {
+            const maxScroll = categoryGrid.scrollWidth - categoryGrid.clientWidth;
+            categoryGrid.classList.toggle('can-scroll-left', categoryGrid.scrollLeft > 0);
+            categoryGrid.classList.toggle('can-scroll-right', categoryGrid.scrollLeft < maxScroll - 1);
+        };
+        categoryGrid.addEventListener('scroll', updateCategoryScrollFade, { passive: true });
+        window.addEventListener('resize', updateCategoryScrollFade);
+        updateCategoryScrollFade();
     });
 </script>
 </body>

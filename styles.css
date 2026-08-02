@@ -536,6 +536,30 @@ p {
     z-index: 1; /* Above image, below tag */
 }
 
+.category-tag {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: auto;
+    left: auto;
+    background: var(--tertiary-medium);
+    color: var(--neutral-1);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.category-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
 /* App Features Section */
 .app-features {
     padding: 80px 0;
@@ -921,6 +945,23 @@ p {
 
     .category-grid::-webkit-scrollbar {
         display: none;
+    }
+
+    /* Edge fade signals there's more to scroll to (JS toggles these based on
+       actual scroll position, so a side never fades once it's fully seen). */
+    .category-grid.can-scroll-left {
+        -webkit-mask-image: linear-gradient(to right, transparent, black 30px);
+        mask-image: linear-gradient(to right, transparent, black 30px);
+    }
+
+    .category-grid.can-scroll-right {
+        -webkit-mask-image: linear-gradient(to left, transparent, black 30px);
+        mask-image: linear-gradient(to left, transparent, black 30px);
+    }
+
+    .category-grid.can-scroll-left.can-scroll-right {
+        -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+        mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
     }
 
     .category-card {
